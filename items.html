@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrollable Menu with Animation</title>
+    <title>Menu with Cards</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -14,55 +14,36 @@
             color: #333;
         }
         
-        .scroll-container {
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-            width: 100%;
-            max-width: 100%;
+        .container {
+            margin-top: 50px;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* Four columns */
+            gap: 20px;
+            /* Space between cards */
             padding: 20px 0;
-            white-space: nowrap;
-            scrollbar-width: thin;
-        }
-        
-        .scroll-content {
-            display: inline-flex;
-            animation: scroll-left 18s linear infinite;
-        }
-        
-        .scroll-container:hover .scroll-content {
-            animation-play-state: paused;
-        }
-        
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
         }
         
         .card {
-            display: inline-block;
             border: none;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            width: 200px;
-            margin-right: 20px;
             background: rgba(255, 255, 255, 0.9);
-            transition: transform 0.5s, background 0.3s;
-        }
-        
-        .card:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 1);
+            height: 100%;
+            /* Ensure cards fill the space vertically */
         }
         
         .card-img-top {
-            height: 160px;
+            width: 100%;
+            /* Ensure the image takes up the full width */
+            height: 200px;
+            /* Adjusted height for images */
             object-fit: cover;
+            /* Ensure the image aspect ratio is maintained */
         }
         
         .card-body {
@@ -111,96 +92,101 @@
 </head>
 
 <body>
-    <div class="container my-5">
-        <div class="scroll-container">
-            <div class="scroll-content">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="cb.jpg" class="card-img-top" alt="Chicken Biryani">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Biryani</h5>
-                        <p class="card-text">Delicious South Indian Biryani.</p>
-                        <p class="price">₹280</p>
-                        <p class="rating">★ 4.5</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+    <div class="container">
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="cb.jpg" class="card-img-top" alt="Chicken Biryani">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Biryani</h5>
+                    <p class="card-text">Delicious South Indian Biryani.</p>
+                    <p class="price">₹280</p>
+                    <p class="rating">★ 4.5</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 2 -->
-                <div class="card">
-                    <img src="fish.jpg" class="card-img-top" alt="Fish Fry">
-                    <div class="card-body">
-                        <h5 class="card-title">Fish Fry</h5>
-                        <p class="card-text">Crispy South Indian Fish Fry.</p>
-                        <p class="price">₹345</p>
-                        <p class="rating">★ 4.7</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="fish.jpg" class="card-img-top" alt="Fish Fry">
+                <div class="card-body">
+                    <h5 class="card-title">Fish Fry</h5>
+                    <p class="card-text">Crispy South Indian Fish Fry.</p>
+                    <p class="price">₹345</p>
+                    <p class="rating">★ 4.7</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 3 -->
-                <div class="card">
-                    <img src="pb.jpg" class="card-img-top" alt="Prawns Biryani">
-                    <div class="card-body">
-                        <h5 class="card-title">Prawns Biryani</h5>
-                        <p class="card-text">Delicious Prawn biryani</p>
-                        <p class="price">₹320</p>
-                        <p class="rating">★ 4.5</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="pb.jpg" class="card-img-top" alt="Prawns Biryani">
+                <div class="card-body">
+                    <h5 class="card-title">Prawns Biryani</h5>
+                    <p class="card-text">Delicious Prawn biryani</p>
+                    <p class="price">₹320</p>
+                    <p class="rating">★ 4.5</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 4 -->
-                <div class="card">
-                    <img src="tikka.jpg" class="card-img-top" alt="Chicken Tikka">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Tikka</h5>
-                        <p class="card-text">Juicy grilled chicken with spices</p>
-                        <p class="price">₹345</p>
-                        <p class="rating">★ 4.8</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="tikka.jpg" class="card-img-top" alt="Chicken Tikka">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Tikka</h5>
+                    <p class="card-text">Juicy grilled chicken with spices</p>
+                    <p class="price">₹345</p>
+                    <p class="rating">★ 4.8</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 5 -->
-                <div class="card">
-                    <img src="Gobi.jpg" class="card-img-top" alt="Gobi Manchurian">
-                    <div class="card-body">
-                        <h5 class="card-title">Gobi Manchurian</h5>
-                        <p class="card-text">Crispy fried cauliflower</p>
-                        <p class="price">₹150</p>
-                        <p class="rating">★ 4.5</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="Gobi.jpg" class="card-img-top" alt="Gobi Manchurian">
+                <div class="card-body">
+                    <h5 class="card-title">Gobi Manchurian</h5>
+                    <p class="card-text">Crispy fried cauliflower</p>
+                    <p class="price">₹150</p>
+                    <p class="rating">★ 4.5</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 6 -->
-                <div class="card">
-                    <img src="mushroom.jpg" class="card-img-top" alt="Mushroom Masala">
-                    <div class="card-body">
-                        <h5 class="card-title">Mushroom Masala</h5>
-                        <p class="card-text">mushrooms in spicy masala</p>
-                        <p class="price">₹200</p>
-                        <p class="rating">★ 4.4</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="mushroom.jpg" class="card-img-top" alt="Mushroom Masala">
+                <div class="card-body">
+                    <h5 class="card-title">Mushroom Masala</h5>
+                    <p class="card-text">Mushrooms in spicy masala</p>
+                    <p class="price">₹200</p>
+                    <p class="rating">★ 4.4</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 7 -->
-                <div class="card">
-                    <img src="vada-pav.jpg" class="card-img-top" alt="Vada Pav">
-                    <div class="card-body">
-                        <h5 class="card-title">Vada Pav</h5>
-                        <p class="card-text">Classic Mumbai-style Vada Pav.</p>
-                        <p class="price">₹40</p>
-                        <p class="rating">★ 4.8</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="vada-pav.jpg" class="card-img-top" alt="Vada Pav">
+                <div class="card-body">
+                    <h5 class="card-title">Vada Pav</h5>
+                    <p class="card-text">Classic Mumbai-style Vada Pav.</p>
+                    <p class="price">₹40</p>
+                    <p class="rating">★ 4.8</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
-                <!-- Card 8 -->
-                <div class="card">
-                    <img src="paneer.jpg" class="card-img-top" alt="Paneer Butter Masala">
-                    <div class="card-body">
-                        <h5 class="card-title">Paneer Butter Masala</h5>
-                        <p class="card-text">Paneer blended with spices.</p>
-                        <p class="price">₹229</p>
-                        <p class="rating">★ 4.4</p>
-                        <button class="btn btn-custom">Add to Cart</button>
-                    </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="paneer.jpg" class="card-img-top" alt="Paneer Butter Masala">
+                <div class="card-body">
+                    <h5 class="card-title">Paneer Butter Masala</h5>
+                    <p class="card-text">Paneer blended with spices.</p>
+                    <p class="price">₹229</p>
+                    <p class="rating">★ 4.4</p>
+                    <button class="btn btn-custom">Add to Cart</button>
                 </div>
             </div>
         </div>
