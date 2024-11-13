@@ -14,16 +14,6 @@
             color: #333;
         }
         
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
-            z-index: -1;
-        }
-        
         .scroll-container {
             display: flex;
             justify-content: center;
@@ -37,7 +27,7 @@
         
         .scroll-content {
             display: inline-flex;
-            animation: scroll-left 15s linear infinite;
+            animation: scroll-left 18s linear infinite;
         }
         
         .scroll-container:hover .scroll-content {
@@ -59,14 +49,15 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            width: 180px;
+            width: 200px;
             margin-right: 20px;
-            background: #FFECB3;
-            transition: transform 0.3s;
+            background: rgba(255, 255, 255, 0.9);
+            transition: transform 0.5s, background 0.3s;
         }
         
         .card:hover {
             transform: scale(1.05);
+            background: rgba(255, 255, 255, 1);
         }
         
         .card-img-top {
@@ -77,25 +68,25 @@
         .card-body {
             color: #333;
             text-align: center;
-            padding: 12px;
+            padding: 15px;
         }
         
         .card-title {
             font-size: 14px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
         
         .card-text {
             font-size: 12px;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
         
         .price {
             font-weight: bold;
             font-size: 14px;
             color: #333;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         
         .rating {
@@ -117,11 +108,9 @@
             background-color: #ff4b3a;
         }
     </style>
-
 </head>
 
 <body>
-    <div class="overlay"></div>
     <div class="container my-5">
         <div class="scroll-container">
             <div class="scroll-content">
@@ -130,7 +119,7 @@
                     <img src="cb.jpg" class="card-img-top" alt="Chicken Biryani">
                     <div class="card-body">
                         <h5 class="card-title">Chicken Biryani</h5>
-                        <p class="card-text">Delicious South Indian Biryani with spices.</p>
+                        <p class="card-text">Delicious South Indian Biryani.</p>
                         <p class="price">₹280</p>
                         <p class="rating">★ 4.5</p>
                         <button class="btn btn-custom">Add to Cart</button>
@@ -141,7 +130,7 @@
                     <img src="fish.jpg" class="card-img-top" alt="Fish Fry">
                     <div class="card-body">
                         <h5 class="card-title">Fish Fry</h5>
-                        <p class="card-text">Crispy South Indian Fish Fry with spices.</p>
+                        <p class="card-text">Crispy South Indian Fish Fry.</p>
                         <p class="price">₹345</p>
                         <p class="rating">★ 4.7</p>
                         <button class="btn btn-custom">Add to Cart</button>
@@ -149,10 +138,10 @@
                 </div>
                 <!-- Card 3 -->
                 <div class="card">
-                    <img src="pb.jpg" class="card-img-top" alt="Paneer Butter Masala">
+                    <img src="pb.jpg" class="card-img-top" alt="Prawns Biryani">
                     <div class="card-body">
-                        <h5 class="card-title">Paneer Butter Masala</h5>
-                        <p class="card-text">Rich paneer dish with buttery gravy.</p>
+                        <h5 class="card-title">Prawns Biryani</h5>
+                        <p class="card-text">Delicious Prawn biryani</p>
                         <p class="price">₹320</p>
                         <p class="rating">★ 4.5</p>
                         <button class="btn btn-custom">Add to Cart</button>
@@ -163,7 +152,7 @@
                     <img src="tikka.jpg" class="card-img-top" alt="Chicken Tikka">
                     <div class="card-body">
                         <h5 class="card-title">Chicken Tikka</h5>
-                        <p class="card-text">Juicy grilled chicken with spices.</p>
+                        <p class="card-text">Juicy grilled chicken with spices</p>
                         <p class="price">₹345</p>
                         <p class="rating">★ 4.8</p>
                         <button class="btn btn-custom">Add to Cart</button>
@@ -174,7 +163,7 @@
                     <img src="Gobi.jpg" class="card-img-top" alt="Gobi Manchurian">
                     <div class="card-body">
                         <h5 class="card-title">Gobi Manchurian</h5>
-                        <p class="card-text">Crispy fried cauliflower in Manchurian sauce.</p>
+                        <p class="card-text">Crispy fried cauliflower</p>
                         <p class="price">₹150</p>
                         <p class="rating">★ 4.5</p>
                         <button class="btn btn-custom">Add to Cart</button>
@@ -185,7 +174,7 @@
                     <img src="mushroom.jpg" class="card-img-top" alt="Mushroom Masala">
                     <div class="card-body">
                         <h5 class="card-title">Mushroom Masala</h5>
-                        <p class="card-text">Savory mushrooms in spicy masala gravy.</p>
+                        <p class="card-text">mushrooms in spicy masala</p>
                         <p class="price">₹200</p>
                         <p class="rating">★ 4.4</p>
                         <button class="btn btn-custom">Add to Cart</button>
@@ -207,7 +196,7 @@
                     <img src="paneer.jpg" class="card-img-top" alt="Paneer Butter Masala">
                     <div class="card-body">
                         <h5 class="card-title">Paneer Butter Masala</h5>
-                        <p class="card-text">Tasty Paneer Butter Masala blended with spices.</p>
+                        <p class="card-text">Paneer blended with spices.</p>
                         <p class="price">₹229</p>
                         <p class="rating">★ 4.4</p>
                         <button class="btn btn-custom">Add to Cart</button>
