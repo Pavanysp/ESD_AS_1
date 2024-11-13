@@ -20,7 +20,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.5);
             z-index: -1;
         }
         
@@ -32,11 +32,12 @@
             max-width: 100%;
             padding: 20px 0;
             white-space: nowrap;
+            scrollbar-width: thin;
         }
         
         .scroll-content {
             display: inline-flex;
-            animation: scroll-left 20s linear infinite;
+            animation: scroll-left 15s linear infinite;
         }
         
         .scroll-container:hover .scroll-content {
@@ -80,26 +81,26 @@
         }
         
         .card-title {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
             margin-bottom: 4px;
         }
         
         .card-text {
-            font-size: 10px;
+            font-size: 12px;
             margin-bottom: 6px;
         }
         
         .price {
             font-weight: bold;
-            font-size: 12px;
+            font-size: 14px;
             color: #333;
             margin-bottom: 8px;
         }
         
         .rating {
             color: #FFC107;
-            font-size: 10px;
+            font-size: 12px;
             margin-top: 4px;
         }
         
@@ -107,8 +108,8 @@
             background-color: #FF6347;
             color: #fff;
             border-radius: 20px;
-            padding: 4px 10px;
-            font-size: 11px;
+            padding: 6px 12px;
+            font-size: 12px;
             transition: background-color 0.3s;
         }
         
@@ -120,6 +121,7 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
     <div class="container my-5">
         <div class="scroll-container">
             <div class="scroll-content">
@@ -169,7 +171,7 @@
                 </div>
                 <!-- Card 5 -->
                 <div class="card">
-                    <img src="gobi.jpg" class="card-img-top" alt="Gobi Manchurian">
+                    <img src="Gobi.jpg" class="card-img-top" alt="Gobi Manchurian">
                     <div class="card-body">
                         <h5 class="card-title">Gobi Manchurian</h5>
                         <p class="card-text">Crispy fried cauliflower in Manchurian sauce.</p>
