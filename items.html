@@ -33,6 +33,12 @@
             background: rgba(255, 255, 255, 0.9);
             height: 100%;
             width: 220px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
         }
         
         .card-img-top {
@@ -77,11 +83,12 @@
             border-radius: 20px;
             padding: 6px 10px;
             font-size: 10px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         
         .btn-custom:hover {
             background-color: #ff4b3a;
+            transform: scale(1.05);
         }
     </style>
 </head>
